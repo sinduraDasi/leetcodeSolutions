@@ -1,0 +1,10 @@
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        dict={}
+        pairs=0
+        for i in nums:
+            pairs+=dict.get(i,0)
+
+            dict[i]=dict.get(i,0)+1
+        return pairs
+        
